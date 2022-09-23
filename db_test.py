@@ -20,11 +20,11 @@ db = deta.Base("Connection_Streamlit")
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "age": age, "email": email})
+    db.put({"name": name, "age": age, "email": email, "county": county})
 
 "---"
-"Here's everything stored in the database:"
+"Thank you. Your electronic will is now securely stored"
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch().items
-st.write(db_content)
+
