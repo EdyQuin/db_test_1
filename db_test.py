@@ -18,10 +18,5 @@ db = deta
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
     deta.put({"name": name, "age": age, "email": email, "County": county})
-
 "---"
-"Here's everything stored in the database:"
-# This reads all items from the database and displays them to your app.
-# db_content is a list of dictionaries. You can do everything you want with it.
-db_content = db.fetch().items
-st.write(db_content)
+"Thank you, your electronic Will is now safely stored"
