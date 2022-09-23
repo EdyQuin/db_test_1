@@ -18,5 +18,5 @@ if submitted:
 "Here's everything stored in the database:"
 # This reads all items from the database and displays them to your app.
 # deta_content is a list of dictionaries. You can do everything you want with it.
-    deta_content = deta.fetch().items
-    st.write(deta_content)
+deta_content = deta.fetch().items
+st.write(deta_content)
