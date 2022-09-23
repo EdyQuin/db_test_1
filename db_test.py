@@ -12,12 +12,19 @@ with st.form("form"):
 
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
-db = deta
+# Create a new database 
+# If you need a new database, just use another name.
+db = deta.Base("Connection_Streamlit")
 
 # If the user clicked the submit button,
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "age": age, "email": email, "County": county})
+    db.put({"name": name, "age": age, "email": email})
+
 "---"
-"Thank you, your electronic Will is now safely stored"
+"Here's everything stored in the database:"
+# This reads all items from the database and displays them to your app.
+# db_content is a list of dictionaries. You can do everything you want with it.
+db_content = db.fetch().items
+st.write(db_content)
