@@ -17,7 +17,7 @@ db = deta
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "age": age, "email": email, "County": county})
+    deta.put({"name": name, "age": age, "email": email, "County": county})
 
 "---"
 "Here's everything stored in the database:"
