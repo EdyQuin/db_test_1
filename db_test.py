@@ -2,7 +2,7 @@ import streamlit as st
 from deta import Deta
 
 # Data to be written to Deta Base
-with st.form("form"):
+with st.form("form", clear_on_submit=false):
     name = st.text_input("Your name")
     age = st.number_input("Your age")
     email = st.text_input("Your email")
