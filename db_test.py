@@ -27,6 +27,7 @@ if submitted:
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch().items
-st.write("Your will has been saved.", "db_content")
+with st.echo():
+    st.write("Your will has been saved.")
 
 st.image('./LOGO_091622.png')
