@@ -1,6 +1,14 @@
 import streamlit as st
 from deta import Deta
 
+# Theme
+[theme]
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#262730"
+font="sans serif"
+
 # Data to be written to Deta Base
 with st.form("form"):
     name = st.text_input("Your name")
