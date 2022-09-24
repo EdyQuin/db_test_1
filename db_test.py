@@ -28,3 +28,5 @@ if submitted:
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch().items
 st.write(db_content)
+
+st.image('./LOGO_091622.png')
