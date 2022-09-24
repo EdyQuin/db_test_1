@@ -25,7 +25,7 @@ if submitted:
 "Thank you. Your electronic will is now securely stored."
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
-db_content = db.fetch(query={"user.email?contains": "email"}, limit=None, last=None).items
+db_content = db.fetch(query="user.email?contains": "email", limit=None, last=None).items
 st.write(db_content)
 
 st.image('./LOGO_091622.png')
