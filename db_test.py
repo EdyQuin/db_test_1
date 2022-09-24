@@ -22,6 +22,9 @@ db = deta.Base("Connection_Streamlit")
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
     db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
+    with st.spinner(text="In progress"):
+        time.sleep(5)
+        st.success('Done)
 
 "---"
 "Thank you. Your electronic will is now securely stored."
