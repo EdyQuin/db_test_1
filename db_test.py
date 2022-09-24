@@ -22,15 +22,12 @@ db = deta.Base("Connection_Streamlit")
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
     db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
-    with st.spinner(text="In progress"):
-        time.sleep(5)
-        st.success('Done')
 
 "---"
 "Thank you. Your electronic will is now securely stored."
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
-db_content = db.fetch().items
+db_content = db.fetch(limit=1).items
 st.write(db_content)
 
 st.image('./LOGO_091622.png')
