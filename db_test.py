@@ -28,6 +28,6 @@ if submitted:
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch(query=None, limit=None, last=None).items
-st.write(submitted)
+st.write()
 
 st.image('./LOGO_091622.png')
