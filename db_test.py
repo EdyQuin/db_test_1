@@ -18,9 +18,6 @@ db = deta.Base("Connection_Streamlit")
 if submitted:
     db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
 if submitted:
-    with st.spinner('Wait for it...'):
-    time.sleep(5)
-    st.success('Done!')
     st.write("Your electronic will record has been successfully recorded in the database.")
 "---"
 # This reads all items from the database and displays them to your app.
