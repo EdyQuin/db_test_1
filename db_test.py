@@ -9,11 +9,9 @@ with st.form("form"):
     county =st.text_input("Florida county you live in")
     attorney = st.text_input("Your attorney's name")
     submitted = st.form_submit_button("Store in database")
-
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
 db = deta.Base("Connection_Streamlit")
-
 # If the user clicked the submit button,
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
