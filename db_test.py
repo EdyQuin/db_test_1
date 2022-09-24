@@ -2,14 +2,14 @@ import streamlit as st
 from deta import Deta
 
 # Data to be written to Deta Base
-with st.form("form", clear_on_submit=False):
+with st.form("form"):
     name = st.text_input("Your name")
     age = st.number_input("Your age")
     email = st.text_input("Your email")
     county =st.text_input("Florida county you live in")
     attorney = st.text_input("Your attorney's name")
     submitted = st.form_submit_button("Store in database")
-    submitted = st.form_submit_button("Recorded")
+    clear_on_submit=False
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
 db = deta.Base("Connection_Streamlit")
