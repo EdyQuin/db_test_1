@@ -13,8 +13,6 @@ with st.form("form"):
 
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
-# Create a new database 
-# If you need a new database, just use another name.
 db = deta.Base("Connection_Streamlit")
 
 # If the user clicked the submit button,
@@ -28,6 +26,6 @@ if submitted:
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch(query=None, limit=None, last=None).items
-st.write()
+st.write(db_content)
 
 st.image('./LOGO_091622.png')
