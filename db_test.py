@@ -27,3 +27,4 @@ if submitted:
 db_content = db.fetch(query=None, limit=None, last=None).items
 "---"
 st.image('./LOGO_091622.png')
+st.experimental_rerun()
