@@ -6,7 +6,7 @@ with st.form("form"):
     name = st.text_input("Your name")
     age = st.number_input("Your age")
     email = st.text_input("Your email")
-    county =st.text_input("Florida ounty you live in")
+    county =st.text_input("Florida county you live in")
     submitted = st.form_submit_button("Store in database")
 
 
