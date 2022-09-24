@@ -19,7 +19,8 @@ db = deta.Base("Connection_Streamlit")
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
     db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
-st.write("Your electronic will record has been successfully recorded in the database.")
+if submitted: 
+    st.write("Your electronic will record has been successfully recorded in the database.")
 "---"
 "Thank you. Your electronic will is now securely stored."
 # This reads all items from the database and displays them to your app.
