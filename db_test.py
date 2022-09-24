@@ -1,14 +1,6 @@
 import streamlit as st
 from deta import Deta
 
-# Theme
-[theme]
-primaryColor="#F63366"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
-font="sans serif"
-
 # Data to be written to Deta Base
 with st.form("form"):
     name = st.text_input("Your name")
@@ -17,7 +9,6 @@ with st.form("form"):
     county =st.text_input("Florida county you live in")
     attorney = st.text_input("Your attorney's name")
     submitted = st.form_submit_button("Store in database")
-
 
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
@@ -35,5 +26,5 @@ if submitted:
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch(query=None, limit=None, last=None).items
 st.write("Your electronic will record has been successfully recorded in the database.")
-
+"---"
 st.image('./LOGO_091622.png')
