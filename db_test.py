@@ -19,7 +19,7 @@ db = deta.Base("Connection_Streamlit")
 if submitted:
     db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
 if submitted:
-    st.write("Your electronic will record has been successfully saved in the database.")
+    st.write("Your electronic will record has been successfully saved in the database. For any questions please contact the Qualified Custodian @ chiefmanager@assetmana.com")
 "---"
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
