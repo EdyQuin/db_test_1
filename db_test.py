@@ -15,6 +15,7 @@ db = deta.Base("Connection_Streamlit")
 # If the user clicked the submit button,
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
+submitted = st.form_submit_button("Recorded")
 if submitted:
     db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
 if submitted:
