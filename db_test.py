@@ -8,7 +8,7 @@ with st.form("form"):
     email = st.text_input("Your email")
     county =st.text_input("Florida county you live in")
     attorney = st.text_input("Your attorney's name")
-    submitted = st.form_submit_button("Store in database")
+    submitted = st.form_submit_button("Save in database")
     clear_on_submit=False
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
@@ -19,7 +19,7 @@ db = deta.Base("Connection_Streamlit")
 if submitted:
     db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
 if submitted:
-    st.write("Your electronic will record has been successfully recorded in the database.")
+    st.write("Your electronic will record has been successfully saved in the database.")
 "---"
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
