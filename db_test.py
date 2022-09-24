@@ -7,6 +7,7 @@ with st.form("form"):
     age = st.number_input("Your age")
     email = st.text_input("Your email")
     county =st.text_input("Florida county you live in")
+    attorney = st.text_input("Your attorney's name")
     submitted = st.form_submit_button("Store in database")
 
 
@@ -20,7 +21,7 @@ db = deta.Base("Connection_Streamlit")
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "age": age, "email": email, "county": county})
+    db.put({"name": name, "age": age, "email": email, "county": county, "attorney": attorney})
 
 "---"
 "Thank you. Your electronic will is now securely stored."
